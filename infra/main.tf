@@ -22,3 +22,14 @@ resource "aws_instance" "example" {
     Environment = "test"
   }
 }
+
+
+resource "aws_instance" "example2" {
+  ami           = "ami-0a4e637babb7b0a86"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name        = "terraform-example",
+    Environment = "test"
+  }
+}
